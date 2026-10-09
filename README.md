@@ -21,6 +21,28 @@ YOLO 目标检测是常用的视觉识别方案，但完整的训练流程对新
 - **不会做数据集**：内置图片导入、图像标注、YOLO 数据集生成和格式校验。
 - **不会推理**：支持摄像头实时识别和文件夹图片批量识别。
 
+## 下载与安装
+
+### 方式一：安装包（推荐普通用户）
+
+不需要安装 Python、不需要配置任何环境，下载后双击安装即可。
+
+- 网盘下载：https://pan.baidu.com/s/1nXDKYBwJPb7TKxiGC_92fA
+- 提取码：`x3uj`
+
+> 安装包约 3.14 GB，内含全部 11 个预训练模型，超过 GitHub Release 单附件 2 GiB 的上限，因此放在网盘提供。
+
+安装包特性：
+
+- 可自选安装路径
+- 可选创建桌面快捷方式
+- 简体中文安装向导
+- 程序运行产生的 `datasets/` 与 `runs/` 位于安装目录下，**卸载不会删除**
+
+### 方式二：从源码运行（推荐开发者）
+
+适合需要改代码或自行打包的场景，步骤见下方[快速开始](#快速开始)。预训练模型见 [Releases](../../releases) 页的 `YOLO_models_core.zip`。
+
 ## 功能特性
 
 ### 流程一：数据集生成
@@ -107,7 +129,7 @@ pip install -r requirements-cpu.txt
 
 ### 4. 准备模型文件
 
-由于模型文件较大，仓库不包含 `.pt` 文件。请手动下载模型并放到项目根目录的 `models/` 文件夹：
+由于模型文件较大，仓库不包含 `.pt` 文件。请自己准备模型并放到项目根目录的 `models/` 文件夹：
 
 ```text
 models/
@@ -124,8 +146,9 @@ models/
 └── yolov8x.pt
 ```
 
-模型下载地址：
+模型获取方式：
 
+- 常用模型打包：[Releases](../../releases) 页的 `YOLO_models_core.zip`（7 个模型，约 145 MB，解压即用）
 - Ultralytics 官方模型文档：https://docs.ultralytics.com/models/
 - Ultralytics 资源发布页：https://github.com/ultralytics/assets/releases
 
