@@ -21,6 +21,28 @@ This project wraps the whole pipeline in a graphical interface and solves three 
 - **Can't build a dataset**: built-in image import, rectangle labeling, YOLO dataset generation and format validation.
 - **Can't run inference**: live webcam detection and batch folder inference.
 
+## Download & Install
+
+### Option 1: Installer (recommended for regular users)
+
+No Python and no environment setup required — download the installer and double-click it.
+
+- Download (Baidu Netdisk): https://pan.baidu.com/s/1nXDKYBwJPb7TKxiGC_92fA
+- Access code: `x3uj`
+
+> The installer is about 3.14 GB and bundles all 11 pretrained models. That exceeds GitHub's 2 GiB per-asset Release limit, so it is hosted on a file-sharing service.
+
+Installer features:
+
+- Choose your own install path
+- Optional desktop shortcut
+- Simplified Chinese setup wizard
+- The `datasets/` and `runs/` folders created at runtime live inside the install directory and are **not removed on uninstall**
+
+### Option 2: Run from source (recommended for developers)
+
+Useful when you need to modify the code or build your own package — see [Quick Start](#quick-start) below. Pretrained weights are in `YOLO_models_core.zip` on the [Releases](../../releases) page.
+
 ## Features
 
 ### Flow 1 — Dataset generation
