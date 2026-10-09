@@ -1,0 +1,8 @@
+# GPU（CUDA 12.8）依赖
+# 适用于 NVIDIA 显卡，且驱动支持 CUDA 12.8（RTX 50 系建议使用此版本）
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+torch==2.9.1
+torchvision==0.24.1
+
+-r requirements.txt

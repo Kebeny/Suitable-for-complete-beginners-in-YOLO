@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# 测试与覆盖率
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+
+# 构建产物
+build/
+build*/
+dist/
+dist_build*/
+*.manifest
+
+# 训练 / 推理结果（运行期生成）
+runs/
+datasets/
+
+# 大文件与本地模型（体积大，改走 GitHub Release 分发）
+models/
+*.pt
+*.pth
+*.onnx
+*.engine
+*.mlpackage
+
+# 字体：本机自带一份用于内置兜底，但不入库（避免分发受版权保护的字体）
+fonts/
+*.ttf
+*.ttc
+*.otf
+
+# 安装包与本地副本
+YOLO训练引导工具/
+YOLO训练引导工具_Setup.exe
+
+# 工具与本地状态
+tools/
+app_config.json
+app_state.json
+ytg_debug.log
+*.log
+
+# 项目内部文档（按工作区规范保留在本地，不发布到仓库）
+01_需求文档.md
+02_技术架构.md
+03_开发日志.md
+04_踩坑记录.md
+05_项目SOP.md
+06_复盘报告.md
