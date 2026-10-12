@@ -23,25 +23,36 @@ This project wraps the whole pipeline in a graphical interface and solves three 
 
 ## Download & Install
 
+> **Not sure which path you need?**
+> Just want to run the tool on your own images -> use **Option 1**. Everything is point-and-click; **no Python, no conda, no command line required**.
+> Want to modify the code or build your own package -> use **Option 2**.
+
 ### Option 1: Installer (recommended for regular users)
 
-No Python and no environment setup required — download the installer and double-click it.
+**No Python, no conda, no command line required.** Download the installer, double-click it, and you are ready to go.
 
 - Download (Baidu Netdisk): https://pan.baidu.com/s/1nXDKYBwJPb7TKxiGC_92fA
 - Access code: `x3uj`
 
-> The installer is about 3.14 GB and bundles all 11 pretrained models. That exceeds GitHub's 2 GiB per-asset Release limit, so it is hosted on a file-sharing service.
+> The installer is about 3.14 GB and bundles the Python runtime, all 11 pretrained models and the CUDA runtime libraries. That exceeds GitHub's 2 GiB per-asset Release limit, so it is hosted on a file-sharing service.
+
+Before installing, make sure:
+
+- OS is **Windows 10 / 11 (64-bit)**
+- At least **6 GB of free disk space** (about 5.1 GB after installation)
+- If you have an NVIDIA GPU, update the graphics driver first (RTX 50-series requires a recent driver)
 
 Installer features:
 
 - Choose your own install path
 - Optional desktop shortcut
 - Simplified Chinese setup wizard
+- First launch takes about 10-20 seconds (it is unpacking runtime libraries); later launches are normal
 - The `datasets/` and `runs/` folders created at runtime live inside the install directory and are **not removed on uninstall**
 
-### Option 2: Run from source (recommended for developers)
+### Option 2: Run from source (developers)
 
-Useful when you need to modify the code or build your own package — see [Quick Start](#quick-start) below. Pretrained weights are in `YOLO_models_core.zip` on the [Releases](../../releases) page.
+**This is the only path that requires Python.** For modifying the code or building your own package - see [Quick Start](#quick-start) below. Requires Python 3.10-3.12; pretrained weights are in `YOLO_models_core.zip` on the [Releases](../../releases) page.
 
 ## Features
 
@@ -85,10 +96,19 @@ datasets/project/
 
 ## Requirements
 
+**If you use the installer:**
+
 - OS: Windows 10 / 11 (64-bit)
-- Python: 3.10 – 3.12 (3.12 recommended)
-- GPU: NVIDIA GPU (optional — CPU is used when absent)
-- GPU driver: should support CUDA 12.8 (RTX 50-series cards need a recent driver)
+- Disk space: at least 6 GB free
+- Python / conda: **not needed at all**
+- GPU: NVIDIA GPU optional - the tool falls back to CPU training when none is present
+- GPU driver: update to a recent version if you have an NVIDIA GPU (RTX 50-series requires a recent driver)
+
+**If you run from source:**
+
+- OS: Windows 10 / 11 (64-bit)
+- Python: 3.10-3.12 (3.12 recommended)
+- GPU / GPU driver: same as above
 
 > Developed and tested on Windows 11 + Python 3.12 + PyTorch 2.9.1+cu128 + RTX 4060 Laptop.
 
